@@ -1,0 +1,468 @@
+<sdf version='1.7'>
+  <world name='default'>
+    <physics type="ode">
+        <type>world</type>
+        <max_step_size>0.002</max_step_size>
+        <real_time_update_rate>500</real_time_update_rate>
+        <iters>500</iters>
+    </physics>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+    <include>
+        <uri>model://ground_plane</uri>
+    </include>
+    <model name='collision_block'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>6.85973 -0.603828 0 0 -0 1.56899</pose>
+    </model>
+    <model name='rubble'>
+      <static>1</static>
+      <link name='rubble'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='rubble_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://rubble/meshes/shi_zi.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='rubble_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://rubble/meshes/shi_zi.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.43702 1.72405 0 0 -0 0</pose>
+    </model>
+    <model name='sloped_stairs'>
+      <static>1</static>
+      <link name='sloped_stairs'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='sloped_stairs_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://sloped_stairs/meshes/sloped_stairs.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='sloped_stairs_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://sloped_stairs/meshes/sloped_stairs.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>4.64902 -0.830874 -0.048844 -0.025924 0 0</pose>
+    </model>
+    <model name='collision_block_clone'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>6.88761 1.3807 0 0 -0 1.56899</pose>
+    </model>
+    <model name='collision_block_clone_0'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>7.8409 -0.626883 0 0 -0 1.56899</pose>
+    </model>
+    <model name='collision_block_clone_1'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>7.87674 1.39617 0 0 -0 1.56899</pose>
+    </model>
+    <model name='collision_block_clone_2'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>8.92019 -0.618769 0 0 -0 1.56899</pose>
+    </model>
+    <model name='collision_block_clone_3'>
+      <static>1</static>
+      <link name='collision_block'>
+        <pose>0 0 0 1.57 0 3.1415</pose>
+        <collision name='collision_block_collision'>
+          <pose>0 0 0 0 -0 0</pose>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+          <surface>
+            <friction>
+              <ode>
+                <mu>1.5</mu>
+                <mu2>1</mu2>
+              </ode>
+              <torsional>
+                <ode/>
+              </torsional>
+            </friction>
+            <contact>
+              <ode/>
+            </contact>
+            <bounce/>
+          </surface>
+          <max_contacts>10</max_contacts>
+        </collision>
+        <visual name='collision_block_visual'>
+          <pose>0 0 0 0 -0 0</pose>
+          <cast_shadows>0</cast_shadows>
+          <geometry>
+            <mesh>
+              <uri>model://collision_block/meshes/collision_block.obj</uri>
+              <scale>1 1 1</scale>
+            </mesh>
+          </geometry>
+        </visual>
+        <self_collide>0</self_collide>
+        <enable_wind>0</enable_wind>
+        <kinematic>0</kinematic>
+      </link>
+      <pose>8.86969 1.40161 0 0 -0 1.56899</pose>
+    </model>
+    <state world_name='default'>
+      <model name='collision_block'>
+        <pose>6.85973 -0.603828 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>6.85973 -0.603828 0 1.57 -0 -1.5727</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='collision_block_clone'>
+        <pose>6.88761 1.3807 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>6.88761 1.3807 0 1.57 0 -1.57269</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='collision_block_clone_0'>
+        <pose>7.8409 -0.626883 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>7.8409 -0.626883 0 1.57 0 -1.57269</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='collision_block_clone_1'>
+        <pose>7.87674 1.39617 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>7.87674 1.39617 0 1.57 0 -1.57269</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='collision_block_clone_2'>
+        <pose>8.92019 -0.618769 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>8.92019 -0.618769 0 1.57 0 -1.57269</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='collision_block_clone_3'>
+        <pose>8.86969 1.40161 0 0 -0 1.56899</pose>
+        <scale>1 1 1</scale>
+        <link name='collision_block'>
+          <pose>8.86969 1.40161 0 1.57 0 -1.57269</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='ground_plane'>
+        <pose>0 0 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='link'>
+          <pose>0 0 0 0 -0 0</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='rubble'>
+        <pose>4.43702 1.72405 0 0 -0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='rubble'>
+          <pose>4.43702 1.72405 0 1.57 0 3.1415</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+      <model name='sloped_stairs'>
+        <pose>4.64902 -0.830874 -0.048844 -0.025924 0 0</pose>
+        <scale>1 1 1</scale>
+        <link name='sloped_stairs'>
+          <pose>4.64902 -0.830874 -0.048844 1.59592 2e-06 3.1415</pose>
+          <velocity>0 0 0 0 -0 0</velocity>
+          <acceleration>0 0 0 0 -0 0</acceleration>
+          <wrench>0 0 0 0 -0 0</wrench>
+        </link>
+      </model>
+    </state>
+  </world>
+</sdf>

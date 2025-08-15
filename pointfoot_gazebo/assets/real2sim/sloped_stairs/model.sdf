@@ -1,0 +1,38 @@
+<?xml version='1.0'?>
+
+<sdf version='1.7'>
+   <model name="sloped_stairs">
+      <static>true</static>
+      <link name="sloped_stairs">
+         <pose>0 0 0 1.57 0 3.1415</pose>
+         <collision name="sloped_stairs_collision">
+            <pose>0 0 0 0 0 0</pose>
+            <geometry>
+               <mesh>
+                  <uri>model://sloped_stairs/meshes/sloped_stairs.obj</uri>
+                  <scale>1 1 1</scale>
+               </mesh>
+            </geometry>
+            <surface>
+               <friction>
+                  <ode>
+                     <mu>1.5</mu>  <!-- 岩石动摩擦力范围 1.2~1.8 -->
+                     <mu2>1.0</mu2> <!-- 岩石静摩擦力范围 0.8~1.2 -->
+                  </ode>
+               </friction>
+            </surface>
+         </collision>
+         <visual name="sloped_stairs_visual">
+            <pose>0 0 0 0 0 0</pose>
+            <cast_shadows>false</cast_shadows>
+            <geometry>
+               <mesh>
+                  <uri>model://sloped_stairs/meshes/sloped_stairs.obj</uri>
+                  <scale>1 1 1</scale>
+               </mesh>
+            </geometry>
+         </visual>
+      </link>
+   </model>
+</sdf>
+
