@@ -90,11 +90,17 @@ sudo apt install ros-noetic-urdf \
     ```
 
 - 运行仿真
+  - 空场景
 
-  ```
-  source install/setup.bash
-  roslaunch pointfoot_gazebo empty_world.launch
-  ```
+    ```
+    source install/setup.bash
+    roslaunch pointfoot_gazebo empty_world.launch
+    ```
+  - 混合地形场景
+    ```
+    roslaunch pointfoot_gazebo mixed_terrain.launch
+    ```
+    ![](doc/mixed_terrain.jpg)
 
 - 运行控制例程，确保仿真器中机器人有运动，说明仿真环境搭建完成：
 

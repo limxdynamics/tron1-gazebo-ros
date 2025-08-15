@@ -85,11 +85,16 @@ You can create an algorithm development workspace by following these steps:
 
 - Run the simulation: You can set the use_support parameter of the empty_world.launch.py file to true, and execute the following Shell command to run the simulation:
 
-  ```
-  source install/setup.bash
-  roslaunch pointfoot_gazebo empty_world.launch
-  ```
-
+  - empty_world
+    ```
+    source install/setup.bash
+    roslaunch pointfoot_gazebo empty_world.launch
+    ```
+  - mixed_terrain
+    ```
+    roslaunch pointfoot_gazebo mixed_terrain.launch
+    ```
+    ![](doc/mixed_terrain.jpg)
 - Run the control routine to ensure that the robot in the simulator is moving, indicating that the simulation environment has been successfully set up:
 
   ```
