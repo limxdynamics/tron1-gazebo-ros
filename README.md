@@ -58,7 +58,7 @@ You can create an algorithm development workspace by following these steps:
 
   ```
   cd ~/limx_ws/src
-  git clone https://github.com/limxdynamics/robot-description.git
+  git clone https://github.com/limxdynamics/tron1-robot-description.git robot-description
   ```
 
 - Compile Project:

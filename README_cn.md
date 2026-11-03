@@ -63,7 +63,7 @@ sudo apt install ros-noetic-urdf \
 
   ```
   cd ~/limx_ws/src
-  git clone https://github.com/limxdynamics/robot-description.git
+  git clone https://github.com/limxdynamics/tron1-robot-description.git robot-description
   ```
 
 - 编译工程：
